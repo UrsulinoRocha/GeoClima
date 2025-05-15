@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import os
 
-# Função para detectar cidade e país automaticamente
+
 def detectar_localizacao():
     try:
         res = requests.get("http://ipwho.is/").json()
@@ -13,7 +13,7 @@ def detectar_localizacao():
     except:
         return "São Paulo", "Brazil"
 
-# Dicionário com cidades sugeridas
+
 CIDADES_SUGERIDAS = {
     "Detectar automaticamente": None,
     "São Paulo, Brazil": ("São Paulo", "Brazil"),
@@ -23,10 +23,10 @@ CIDADES_SUGERIDAS = {
     "London, United Kingdom": ("London", "United Kingdom")
 }
 
-# Cache para evitar múltiplas requisições em pouco tempo
+
 @st.cache_data(ttl=600)
 def buscar_clima(cidade, pais):
-    API_KEY = "fd538ceb70c5609aa4388b805967d039"  # ← Substitua pela sua chave
+    API_KEY = "fd538ceb70c5609aa4388b805967d039"
     url = "https://api.openweathermap.org/data/2.5/weather"
     params = {
         "q": f"{cidade},{pais}",
@@ -49,13 +49,13 @@ def buscar_clima(cidade, pais):
     except:
         return None
 
-# Aplica o CSS externo ao app
+
 def aplicar_css_externo(caminho_css="styles.css"):
     if os.path.exists(caminho_css):
         with open(caminho_css) as f:
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-# Função principal
+
 def main():
     st.set_page_config(page_title="Clima Atual", layout="centered")
     aplicar_css_externo()

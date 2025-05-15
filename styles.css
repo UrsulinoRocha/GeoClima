@@ -1,6 +1,4 @@
-/* styles.css */
 
-/* Fundo fixo com imagem personalizada */
 .stApp {
       background-image: url("https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1650&q=80");
     background-size: cover;
@@ -8,7 +6,7 @@
     background-attachment: fixed;
 }
 
-/* Container principal com fundo translúcido e responsivo */
+
 .block-container {
     background-color: rgba(255, 255, 255, 0.95);
     padding: 2rem;
@@ -18,18 +16,18 @@
     margin: auto;
 }
 
-/* Texto com contraste */
+
 h1, h2, h3, h4, h5, h6, p, label {
     color: #222 !important;
 }
 
-/* Caixa de seleção */
+
 .stSelectbox > div {
     background-color: #ffffff44;
     border-radius: 8px;
 }
 
-/* Responsividade para telas menores */
+
 @media screen and (max-width: 768px) {
     .block-container {
         padding: 1rem;
@@ -45,7 +43,7 @@ h1, h2, h3, h4, h5, h6, p, label {
         text-align: center;
     }
 
-    .css-1v0mbdj.e115fcil1 { /* Correção de coluna para stack vertical no mobile */
+    .css-1v0mbdj.e115fcil1 { 
         flex-direction: column !important;
     }
 }
