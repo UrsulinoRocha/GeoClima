@@ -26,7 +26,7 @@ CIDADES_SUGERIDAS = {
 
 @st.cache_data(ttl=600)
 def buscar_clima(cidade, pais):
-    API_KEY = "fd538ceb70c5609aa4388b805967d039"
+    API_KEY = "" #Token
     url = "https://api.openweathermap.org/data/2.5/weather"
     params = {
         "q": f"{cidade},{pais}",
