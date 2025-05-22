@@ -11,7 +11,7 @@ def detectar_localizacao():
         else:
             return "São Paulo", "Brazil"
     except:
-        return "São Paulo", "Brazil"
+        return "São Paulo", "Brazil"   
 
 
 CIDADES_SUGERIDAS = {
